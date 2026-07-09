@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Shield, Clock, CheckCircle2, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
@@ -157,10 +158,8 @@ const HeroSection = () => {
           </div>
           {/* CTA Button */}
           <div className="mt-10 sm:mt-12">
-            <a
-              href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=ask4loan"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/application-form"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.gtag) {
                   window.gtag('event', 'loan_application_click', {
@@ -182,7 +181,7 @@ const HeroSection = () => {
                 Apply Now
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

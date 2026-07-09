@@ -1,6 +1,7 @@
 'use client';
 
 import { FileText, GitCompare, Wallet } from "lucide-react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
 const HowItWorks = () => {
@@ -130,10 +131,8 @@ const HowItWorks = () => {
           <p className="text-sm mb-4" style={{ color: "#64748B" }}>
             Ready to get started?
           </p>
-          <a
-            href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=ask4loan"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/application-form"
             onClick={() => {
               if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('event', 'loan_application_click', {
@@ -154,7 +153,7 @@ const HowItWorks = () => {
             >
               Start Your Application
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 

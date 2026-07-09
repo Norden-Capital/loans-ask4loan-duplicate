@@ -1,6 +1,7 @@
 'use client';
 
 import { Check, ArrowRight, DollarSign, FileCheck, Shield } from "lucide-react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
 const Requirements = () => {
@@ -82,10 +83,8 @@ const Requirements = () => {
             </div>
 
             {/* Desktop CTA Button */}
-            <a
-              href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=ask4loan"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/application-form"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.gtag) {
                   window.gtag('event', 'loan_application_click', {
@@ -107,7 +106,7 @@ const Requirements = () => {
                 Apply Now
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
-            </a>
+            </Link>
           </div>
 
           {/* Right - Feature Cards */}
@@ -160,10 +159,8 @@ const Requirements = () => {
 
         {/* Mobile CTA Button */}
         <div className="mt-8 lg:hidden flex justify-center">
-          <a
-            href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=ask4loan"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/application-form"
             onClick={() => {
               if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('event', 'loan_application_click', {
@@ -185,7 +182,7 @@ const Requirements = () => {
               Apply Now
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 

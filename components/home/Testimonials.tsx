@@ -2,6 +2,7 @@
 
 import { Star, Quote } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
 const Testimonials = () => {
@@ -161,10 +162,8 @@ const Testimonials = () => {
           <p className="text-sm sm:text-base mb-4" style={{ color: "#64748B" }}>
             Ready to join thousands of happy customers?
           </p>
-          <a
-            href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=ask4loan"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/application-form"
             onClick={() => {
               if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('event', 'loan_application_click', {
@@ -185,7 +184,7 @@ const Testimonials = () => {
             >
               Get Your Loan Today
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 

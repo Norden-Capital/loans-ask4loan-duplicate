@@ -9,6 +9,7 @@ import {
   Sparkles,
   ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
 const Benefits = () => {
@@ -129,10 +130,8 @@ const Benefits = () => {
 
         {/* CTA Button */}
         <div className="text-center mt-12 sm:mt-16 lg:mt-20">
-          <a
-            href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=ask4loan"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/application-form"
             onClick={() => {
               if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('event', 'loan_application_click', {
@@ -154,7 +153,7 @@ const Benefits = () => {
               Start Your Application
               <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 

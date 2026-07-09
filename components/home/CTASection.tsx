@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowRight, Sparkles, CheckCircle } from "lucide-react";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 
 const CTASection = () => {
@@ -48,10 +49,8 @@ const CTASection = () => {
 
           {/* CTA Button */}
           <div className="flex justify-center mb-8">
-            <a
-              href="https://cmi.rocks/go/6a0768c8e9dee?affiliate_sub1=ask4loan"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/application-form"
               onClick={() => {
                 if (typeof window !== 'undefined' && window.gtag) {
                   window.gtag('event', 'loan_application_click', {
@@ -73,7 +72,7 @@ const CTASection = () => {
                 Apply Now
                 <ArrowRight className="w-4 h-4" />
               </button>
-            </a>
+            </Link>
           </div>
 
           {/* Trust Indicators */}
